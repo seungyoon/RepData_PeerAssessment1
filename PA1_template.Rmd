@@ -32,11 +32,6 @@ For this part of the assignment, you can ignore the missing values in the datase
 ```{r warning=FALSE, message=FALSE}
 library(ggplot2)
 steps_per_date <- aggregate(steps ~ date, data, sum)
-#qplot(steps_per_date[,2], data=steps_per_date, geom="histogram")
-#ggplot(steps_per_date, aes(x=date, y=steps)) +
-#    geom_histogram(stat = "identity") +
-#    labs(x = "Date", y = "total number of steps") + 
-#    theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplot(steps_per_date, aes(x=steps)) + geom_histogram()
 ```
 
